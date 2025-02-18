@@ -23,7 +23,10 @@ jobs:
                 port: 22
                 script: |
                  ls
+                 export NVM_DIR=~/.nvm
+                 source ~/.nvm/nvm.sh
                  cd github-actions
                  git pull
+                 npm install
                  npm run build
                  pm2 restart actions 
