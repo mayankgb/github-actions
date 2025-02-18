@@ -23,3 +23,7 @@ jobs:
                 port: 22
                 script: |
                  ls
+                 cd github-actions
+                 git pull
+                 npm run build
+                 pm2 restart actions 
